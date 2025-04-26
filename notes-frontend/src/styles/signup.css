@@ -1,39 +1,12 @@
-.login-page {
+.signup-page {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction:column;
     align-items: center;
-    margin: 0 0 2rem;
+    /* margin: 0 0 2rem; */
 }
 
-.login-titles {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    margin-bottom: 1.2rem;
-}
-
-.login-h1 {
-    font-weight: bold;
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-    color: #0D0A0A
-}
-
-.login-h3 {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #4B4B4B;
-}
-
-.login-logo {
-    max-width: 100%;
-    max-height: 100%;
-    width: 7rem;
-    margin-top: 1.2rem;
-  }
-
-.login-form {
+.signup-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,17 +14,39 @@
     gap: 15px; /* Espaçamento automático entre elementos */
 }
 
-.login-input {
+.signup-input {
     height: 2rem;
     width: 20rem;
     border-radius: 7px;
     border-color: #666161;
     padding-left: 20px;
     font-size: medium;
-    margin-bottom: 7px;
+    margin-bottom: 4px;
 }
 
-.login-button {
+/* .signup-titles {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-bottom: 1.2rem;
+} */
+
+.signup-h1 {
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #0D0A0A;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.signup-logo {
+    max-width: 100%;
+    max-height: 100%;
+    width: 7rem;
+    /* margin-top: 1.2rem; */
+  }
+
+.signup-button {
     margin-top: 7px;
     width: 100%;
     background-color: #3B82F6;
@@ -65,12 +60,7 @@
 }
 
 /* Botão escurecendo ao passar o mouse */
-.login-button:hover {
+.signup-button:hover {
     background-color: #2563EB; /* Cor um pouco mais escura */
     transform: scale(1.02); /* Pequeno aumento de tamanho */
-}
-
-
-.divisao {
-    margin-bottom: 15px;
 }
