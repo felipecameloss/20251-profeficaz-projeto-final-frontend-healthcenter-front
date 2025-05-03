@@ -1,12 +1,12 @@
-.signup-page {
+.triagem-page {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction:column;
     align-items: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
-.signup-form {
+.triagem-form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,7 +14,7 @@
     gap: 15px; /* Espaçamento automático entre elementos */
 }
 
-.signup-input {
+.triagem-input {
     height: 2rem;
     width: 20rem;
     border-radius: 7px;
@@ -24,14 +24,7 @@
     margin-bottom: 4px;
 }
 
-/* .signup-titles {
-    display: flex;
-    flex-direction:column;
-    align-items: center;
-    margin-bottom: 1.2rem;
-} */
-
-.signup-h1 {
+.triagem-h1 {
     font-weight: bold;
     font-size: 2.5rem;
     color: #0D0A0A;
@@ -39,15 +32,16 @@
     margin-top: 15px;
 }
 
-.signup-logo {
+.triagem-logo {
     max-width: 100%;
     max-height: 100%;
     width: 6rem;
     /* margin-top: 1.2rem; */
   }
 
-.signup-button {
+.triagem-button {
     margin-top: 7px;
+    margin-bottom: 7px;
     width: 100%;
     background-color: #3B82F6;
     border-radius: 7px;
@@ -60,7 +54,25 @@
 }
 
 /* Botão escurecendo ao passar o mouse */
-.signup-button:hover {
+.triagem-button:hover {
     background-color: #2563EB; /* Cor um pouco mais escura */
     transform: scale(1.02); /* Pequeno aumento de tamanho */
+}
+
+.triagem-select {
+    height: 2.3rem;
+    width: 100%;
+    border-radius: 7px;
+    border-color: #666161;
+    border-width: 2px;
+    padding-left: 15px;
+    font-size: medium;
+    margin-bottom: 4px;
+    color: #666161;
+}
+
+.triagem-h4 {
+    font-size: larger;
+    margin-bottom: 0.7rem;
+    margin-top: 0.8rem;
 }
