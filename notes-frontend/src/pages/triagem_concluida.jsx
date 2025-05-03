@@ -3,11 +3,8 @@ import "../styles/triagem_concluida.css";
 export default function TriagemConcluida() {
     return (
         <div className="tc-page">
-            <img src="src\assets\logo.jpg" className="login-logo" />
             <div className="tc-card">
-                <div className="tc-icon">
-                    <span className="tc-plus">+</span>
-                </div>
+            <img src="src\assets\logo.jpg" className="login-logo" />    
                 <h1 className="tc-h1">Health Center</h1>
                 <p className="tc-subtitle">Sua triagem foi concluída!!</p>
 
