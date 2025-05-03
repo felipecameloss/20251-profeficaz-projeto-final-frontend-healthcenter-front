@@ -7,8 +7,8 @@ export default function Triagem_inteligente() {
         <div className="ti-page">
             <img src="src\assets\logo.jpg" className="login-logo" />
             <h1 className="ti-h1"> Triagem Inteligente </h1>
-            <h3 className="ti-h3"> Insira mais algumas <br></br> informações para calcularmos <br></br> sua posição na fila</h3>
-            <form className="ti-form">
+            <h3 className="ti-h3"> Insira algumas <br></br> informações para calcularmos <br></br> sua posição na fila</h3>
+            <form className="ti-form" action={'/fila_triagem_e_atendimento'}>
 
                 {/* Idade */}
                 <input className="ti-input" type="number" placeholder="Idade" id="idade" name="idade" required></input>
@@ -24,7 +24,7 @@ export default function Triagem_inteligente() {
 
                 <textarea className="ti-textarea" placeholder="Digite seus sintomas" id="sintomas" name="sintomas" required></textarea>
 
-                <button className="ti-button" type="submit" >Confirmar</button>
+                <button className="ti-button" type="submit">Confirmar</button>
             </form>
         </div>
     )

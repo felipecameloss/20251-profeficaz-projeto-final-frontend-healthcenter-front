@@ -30,7 +30,7 @@ export default function Signup() {
                 {/* Endereço */}
                 <input className="signup-input" type="text" placeholder="Endereço" required></input>
 
-                <button className="signup-button" type="submit" class="signup-button">Criar conta</button>
+                <button className="signup-button" type="submit" >Criar conta</button>
             </form>
         </div>
     )
