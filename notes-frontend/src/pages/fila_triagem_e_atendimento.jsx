@@ -5,7 +5,7 @@ export default function Fila_triagem_e_atendimento() {
     return (
         <div className="fta-page">
             <div className="fta-div">
-                <div className="fta-triagem-oficial"> 
+                <div className="fta-div2"> 
                     <div className="fta-subtitle">
                         <img src="src\assets\triagem-oficial.jpg" className="fta-img" />
                         <p className="fta-hp"> Triagem oficial</p>
@@ -14,7 +14,7 @@ export default function Fila_triagem_e_atendimento() {
                     <p className="fta-p"> Sua posição na fila: </p>
                     <p className="fta-p"> Tempo de espera: </p>
                 </div>
-                <div className="fta-atendimento-medico">
+                <div className="fta-div2">
                     <div className="fta-subtitle">
                         <img src="src\assets\atendimento-medico.jpg" className="fta-img" />
                         <p className="fta-hp"> Atendimento médico </p>
@@ -23,7 +23,7 @@ export default function Fila_triagem_e_atendimento() {
                     <p className="fta-p"> Sua posição na fila: </p>
                     <p className="fta-p"> Tempo de espera: </p>
                 </div>
-                <div className="fta-tempo-total">
+                <div className="fta-div2">
                     <div className="fta-subtitle">
                         <img src="src\assets\tempo-total.jpg" className="fta-img" />
                         <p className="fta-hp"> Tempo total </p>
