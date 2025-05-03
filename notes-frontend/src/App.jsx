@@ -3,6 +3,7 @@ import Signup from './pages/signup'
 import Triagem from './pages/triagem'
 import Triagem_inteligente from './pages/triagem_inteligente'
 import Atendimento_concluido from './pages/atendimento_concluido'
+import Fila_triagem_e_atendimento from './pages/fila_triagem_e_atendimento'
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
                 <Route path='/triagem' element={<Triagem />} />
                 <Route path='/triagem_inteligente' element={<Triagem_inteligente />} />
                 <Route path='/atendimento_concluido' element={<Atendimento_concluido />} />
+                <Route path='/fila_triagem_e_atendimento' element={<Fila_triagem_e_atendimento />} />
             </Routes>
         </>
     )

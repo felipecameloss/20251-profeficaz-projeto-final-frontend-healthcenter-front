@@ -1,0 +1,98 @@
+.fta-page {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.fta-h4 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #7b7979;
+    text-align: center;
+}
+
+.fta-button {
+    margin-top: 5px;
+    width: 25%;
+    background-color: #3B82F6;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    height: 2rem;
+    cursor: pointer; /* Cursor de clicar */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Suavizar a mudança */
+    font-size: medium;
+}
+
+/* Botão escurecendo ao passar o mouse */
+.fta-button:hover {
+    background-color: #2563EB; /* Cor um pouco mais escura */
+    transform: scale(1.02); /* Pequeno aumento de tamanho */
+}
+
+.fta-triagem-oficial {
+    border-style: solid;
+    border-color: #666161;
+    border-width: 3px;
+    border-radius: 12px;
+    width: 383px;
+    margin-bottom: 2rem;
+}
+
+.fta-atendimento-medico {
+    border-style: solid;
+    border-color: #666161;
+    border-width: 3px;
+    border-radius: 12px;
+    width: 383px;
+    margin-bottom: 2rem;
+}
+
+.fta-tempo-total {  
+    border-style: solid;
+    border-color: #666161;
+    border-width: 3px;
+    border-radius: 12px;
+    width: 383px;
+}
+
+.fta-hp {
+    font-size: large;
+    font: bold;
+    margin-left: 0.5rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.fta-p {
+    padding-left: 1rem;
+    color: #666161;
+}
+
+.fta-hr {
+    width: 100%;
+    border-width: 1.5px;
+    border-color: #666161;
+}
+
+.fta-div {
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 50%;
+}
+
+.fta-img {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    width: 6%;
+    height: 6%;
+}
+
+.fta-subtitle {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

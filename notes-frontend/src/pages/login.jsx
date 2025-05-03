@@ -16,7 +16,7 @@ export default function Login() {
             <form className="login-form" action={'/triagem_inteligente'}>
                 <input className='login-input' type="email" placeholder="E-mail" required></input>
                 <input className='login-input' type="password" placeholder="Senha" required></input>
-                <button className='login-button' type="submit" class="login-button">Entrar</button>
+                <button className='login-button' type="submit">Entrar</button>
                 <p>Não possui uma conta? <a href="/signup">Cadastre-se</a></p>
             </form>
         </div>
