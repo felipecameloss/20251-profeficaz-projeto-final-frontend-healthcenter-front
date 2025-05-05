@@ -10,9 +10,6 @@ export default function Signup() {
                 {/* Nome completo */}
                 <input className="signup-input" type="text" placeholder="Nome completo" id="nome" name="nome" required></input>
 
-                {/* Idade */}
-                <input className="signup-input" type="number" placeholder="Idade" id="idade" name="idade" required></input>
-
                 {/* E-mail */}
                 <input className="signup-input" type="email" placeholder="E-mail" id="email" name="email" required></input>
 

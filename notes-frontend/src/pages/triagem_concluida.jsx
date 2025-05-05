@@ -14,7 +14,7 @@ export default function TriagemConcluida() {
                         Sua posição na fila: <span className="tc-bold">12°</span>
                     </p>
                     <p className="tc-text">
-                        Tempo de espera: <span className="tc-bold">1 hora 10 minutos</span>
+                        Tempo de espera: <span className="tc-bold"></span>
                     </p>
                 </div>
 

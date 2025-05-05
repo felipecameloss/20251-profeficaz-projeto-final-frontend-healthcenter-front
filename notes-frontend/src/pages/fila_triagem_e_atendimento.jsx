@@ -33,7 +33,7 @@ export default function Fila_triagem_e_atendimento() {
                 </div>
             </div>
             <h4 className="fta-h4">As informações mostradas são apenas<br></br>
-                estimativas baseadas na sua triagem feita pela <br></br>
+                estimativas baseadas na sua triagem feita por <br></br>
                 IA, portanto, estão sujeitas a alteração após sua <br></br>
                 chegada na unidade e a triagem oficial.</h4>
             <button className='fta-button' type="submit">Atualizar</button>
