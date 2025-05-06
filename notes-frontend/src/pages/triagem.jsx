@@ -1,5 +1,7 @@
 import "../styles/triagem.css";
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const dados = [
     { 'nome': 'Felipe', 'sintomas': 'dor de cabeça', 'gravidade': 'leve'},
@@ -11,12 +13,16 @@ const dados = [
 
 export default function Triagem() {
 
-    const [pacienteSelecionado, setPacienteSelecionado] = useState(dados[0]);
+    const navigate = useNavigate();
+    const [nome, setNome] = useState('');
+    // const [sintomas, setSintomas] = useState('');
+    const [gravidade, setGravidade] = useState('');
 
-    const handleSelecionarPaciente = (e) => {
-        const nome = e.target.value;
-        const paciente = dados.find((p) => p.nome === nome);
-        setPacienteSelecionado(paciente);
+    const handleSelecionarPaciente = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.put(`http://127.0.0.1:5000/triagem/${cpf}`,
+        }
     };
 
     return (

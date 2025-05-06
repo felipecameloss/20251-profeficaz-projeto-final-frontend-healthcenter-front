@@ -20,12 +20,22 @@ export default function Login({ onLogin }) {
     
             const token = response.data.access_token;
             const cpf = response.data.cpf;
+            const tipo = response.data.tipo;
     
             localStorage.setItem("token", token);
             localStorage.setItem("cpf", cpf); 
+            localStorage.setItem("tipo", tipo);
     
             onLogin(token);  // Isso atualiza o token e permite o redirecionamento
-            navigate("/triagem_inteligente");
+
+            if (tipo === 'paciente') {
+                navigate("/triagem_inteligente");
+            } else if (tipo === 'funcionario') {
+                navigate("/triagem");
+            } else {
+                setErro("Tipo de usuário desconhecido.");
+            }
+    
         } catch (e) {
             if (e.response) {
                 const msg = e.response.data.msg;
@@ -42,9 +52,7 @@ export default function Login({ onLogin }) {
                 setErro('Erro na conexão com o servidor');
             }
         }
-    };
-    
-    
+    };  
 
     return (
         <div className="login-page">
