@@ -1,9 +1,11 @@
 import "../styles/login.css";
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 export default function Login({ onLogin }) {
 
+    const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
     const [erro, setErro] = useState('');
@@ -11,34 +13,33 @@ export default function Login({ onLogin }) {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-          const resposta = await axios.post('http://localhost:5000/login', {
-            email,
-            senha
-        });
-
-        // Armazenando o token
-        const token = resposta.data.access_token;
-        localStorage.setItem("token", token);
-        onLogin(token);
-
+            const response = await axios.post('http://127.0.0.1:5000/login', {
+                email,
+                senha
+            });
+    
+            const token = response.data.access_token;
+            localStorage.setItem("token", token);
+            onLogin(token);  // Isso atualiza o token e permite o redirecionamento
+            navigate("/triagem_inteligente");
         } catch (e) {
-            // Caso tenha uma resposta vinda do servidor
             if (e.response) {
-                if (e.response.data.erro === 'Usuário não encontrado') {
+                const msg = e.response.data.msg;
+                if (msg === 'Usuário não encontrado') {
                     setErro('E-mail não cadastrado.');
-                } else if (e.response.data.erro === 'Senha incorreta') {
-                    setErro('Senha incorreta.')
-                } else if (e.response.data.erro === 'Email e senha são obrigatórios') {
-                    setErro('Email e senha são obrigatórios.')
+                } else if (msg === 'Senha incorreta') {
+                    setErro('Senha incorreta.');
+                } else if (msg === 'Email e senha são obrigatórios') {
+                    setErro('Email e senha são obrigatórios.');
                 } else {
                     setErro('Erro desconhecido.');
                 }
-            // Caso não tenha uma resposta vinda do servidor
             } else {
-                setErro('Erro na conexão com o servidor')
+                setErro('Erro na conexão com o servidor');
             }
         }
     };
+    
 
     return (
         <div className="login-page">
@@ -47,7 +48,7 @@ export default function Login({ onLogin }) {
                 <h1 className="login-h1">Health Center</h1>
                 <h3 className="login-h3">Sua saúde começa aqui!</h3>
             </div>
-            <form className="login-form" onSubmit={handleLogin} action={'/triagem_inteligente'}>
+            <form className="login-form" onSubmit={handleLogin}>
 
                 {/* Este value e este onchange serve para irmos atualizando as informações inseridas nos inputs a medida que o usuário digita */}
                 <input className='login-input' type="email" placeholder="E-mail" value={email} onChange={e => setEmail(e.target.value)} required></input>
