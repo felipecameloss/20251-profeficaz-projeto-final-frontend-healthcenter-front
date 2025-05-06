@@ -19,7 +19,11 @@ export default function Login({ onLogin }) {
             });
     
             const token = response.data.access_token;
+            const cpf = response.data.cpf;
+    
             localStorage.setItem("token", token);
+            localStorage.setItem("cpf", cpf); 
+    
             onLogin(token);  // Isso atualiza o token e permite o redirecionamento
             navigate("/triagem_inteligente");
         } catch (e) {
@@ -39,6 +43,7 @@ export default function Login({ onLogin }) {
             }
         }
     };
+    
     
 
     return (

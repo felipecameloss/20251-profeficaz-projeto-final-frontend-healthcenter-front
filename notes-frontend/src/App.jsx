@@ -5,11 +5,6 @@ import axios from 'axios';
 function App({ onLogin }) {
   const [token, setToken] = useState(localStorage.getItem("token"));
 
-  const handleLogout = () => {
-    localStorage.removeItem("token");
-    setToken(null);
-  };
-
   useEffect(() => {
     if (token) {
       axios
@@ -18,12 +13,10 @@ function App({ onLogin }) {
         })
         .catch((err) => {
           console.error(err);
-          handleLogout(); // token inválido ou expirado
         });
     }
   }, [token]);
 
-  // Se quiser disponibilizar o token para outras rotas, use Context depois
   return null;
 }
 

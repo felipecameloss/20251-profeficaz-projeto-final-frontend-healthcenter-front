@@ -21,6 +21,7 @@ function RouterWrapper() {
     setToken(newToken);
   };
 
+  // Lista dos paths
   const router = createBrowserRouter([
     { path: "/", element: <Login onLogin={handleLogin} /> },
     { path: "/signup", element: <Signup /> },
@@ -31,6 +32,7 @@ function RouterWrapper() {
     { path: "/triagem_concluida", element: <TriagemConcluida /> },
   ]);
 
+  // Retorno o path e a função
   return <RouterProvider router={router} />;
 }
 
