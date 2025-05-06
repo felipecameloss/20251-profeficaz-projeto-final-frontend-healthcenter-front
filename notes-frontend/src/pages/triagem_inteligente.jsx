@@ -1,5 +1,4 @@
 import "../styles/triagem_inteligente.css";
-import { useNavigate } from 'react-router-dom';
 
 export default function Triagem_inteligente() {
 
