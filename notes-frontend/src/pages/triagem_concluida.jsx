@@ -1,6 +1,11 @@
 import "../styles/triagem_concluida.css";
+import { useLocation, useNavigate } from "react-router-dom";
 
 export default function TriagemConcluida() {
+
+    const location = useLocation();
+    const dados = location.state || {};
+
     return (
         <div className="tc-page">
             <div className="tc-card">
@@ -11,15 +16,15 @@ export default function TriagemConcluida() {
                 <div className="tc-box">
                     <p className="tc-atendimento">🩺 Atendimento Médico</p>
                     <p className="tc-text">
-                        Sua posição na fila: <span className="tc-bold">12°</span>
+                        Sua posição na fila: {dados.posicao_na_fila ?? '-'}
                     </p>
                     <p className="tc-text">
-                        Tempo de espera: <span className="tc-bold"></span>
+                        Tempo de espera: {dados.tempo_estimado_espera ?? '-'}
                     </p>
                 </div>
 
                 <p className="tc-note">Aguarde até que te chamem para o seu atendimento.</p>
-                <button className="tc-button">Atualizar</button>
+                {/* <button className="tc-button">Atualizar</button> */}
             </div>
         </div>
     );
